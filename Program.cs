@@ -4,6 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//skapar simpla metoder för + - * & / istället för att göra uträkning i switch
+class Operation
+{
+    public double mAddition(double num1, double num2)
+    {
+        return num1 + num2;
+    }
+    public double mSubtract(double num1, double num2)
+    {
+        return num1 - num2;
+    }
+    public double mMultiplication(double num1, double num2)
+    {
+        return num1 * num2;
+    }
+    public double mDivision(double num1, double num2)
+    {
+        return num1 / num2;
+    }
+}
 internal class Program
 {
     static void Main(string[] args)
