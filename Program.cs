@@ -36,6 +36,18 @@ class Operation
 }
 class inputs
 {
+    //Metod för att hantera inmatning av ett tal och felhantera
+    public double ValidDouble(string prompt)
+    {
+        double number;
+        Console.WriteLine(prompt);
+        //använder metoden TryDouble för att felhantera ogiltig inmatning. När man gjort rätt inmatning så returneras number.
+        while (!TryDouble(Console.ReadLine(), out number))
+        {
+            Console.WriteLine("Felaktig inmatning, försök igen!");
+        }
+        return number;
+    }
 
 
     // skapar en metod för TryParse för att kunna kalla på den när jag vill felhantera
