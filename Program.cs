@@ -100,19 +100,19 @@ internal class Program
         switch (operation)
         {
             case '+':
-                result = op.mAddition(num1 + num2);
+                result = op.mAddition(num1, num2);
                 break;
 
             case '-':
-                result = op.mSubtract(num1 - num2);
+                result = op.mSubtract(num1, num2);
                 break;
 
             case '*':
-                result = op.mMultiplication(num1 * num2);
+                result = op.mMultiplication(num1, num2);
                 break;
 
             case '/':
-                result = op.mDivision(num1 / num2);
+                result = op.mDivision(num1, num2);
                 break;
                 
                 default:
