@@ -83,7 +83,10 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        //instanser för användning av metoder i klasserna
         Operation op = new Operation();
+        inputs Inputs = new inputs();
+
         Console.WriteLine("Enkel kalkylator");
         Console.WriteLine("Ange operation (+, -, *, /");
         char operation = Console.ReadKey().KeyChar;
@@ -97,19 +100,19 @@ internal class Program
         switch (operation)
         {
             case '+':
-                result = num1 + num2;
+                result = op.mAddition(num1 + num2);
                 break;
 
             case '-':
-                result = num1 - num2;
+                result = op.mSubtract(num1 - num2);
                 break;
 
             case '*':
-                result = num1 * num2;
+                result = op.mMultiplication(num1 * num2);
                 break;
 
             case '/':
-                result = num1 / num2;
+                result = op.mDivision(num1 / num2);
                 break;
                 
                 default:
