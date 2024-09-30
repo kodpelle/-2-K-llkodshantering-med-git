@@ -21,6 +21,15 @@ class Operation
     }
     public double mDivision(double num1, double num2)
     {
+        do
+        {
+            if (num2 == 0)
+            {
+                Console.WriteLine("Du kan inte dividera med 0, försök igen");
+                num2 = Convert.ToDouble(Console.ReadLine());
+            }
+        }
+        while (num2 == 0);
         return num1 / num2;
     }
 }
@@ -28,6 +37,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        Operation op = new Operation();
         Console.WriteLine("Enkel kalkylator");
         Console.WriteLine("Ange operation (+, -, *, /");
         char operation = Console.ReadKey().KeyChar;
