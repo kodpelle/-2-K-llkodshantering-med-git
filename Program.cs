@@ -120,7 +120,7 @@ internal class Program
                 return;
 
         }
-        Console.WriteLine($"Resultat: {result}");
+        Console.WriteLine($"Resultatet av {num1}{operation}{num2} = {result}");
         Console.ReadKey();
 
     }
