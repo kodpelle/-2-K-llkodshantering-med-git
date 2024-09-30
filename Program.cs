@@ -19,6 +19,7 @@ class Operation
     {
         return num1 * num2;
     }
+    //Ser till att man inte kan dela med 0
     public double mDivision(double num1, double num2)
     {
         do
