@@ -88,12 +88,12 @@ internal class Program
         inputs Inputs = new inputs();
 
         Console.WriteLine("Enkel kalkylator");
-        Console.WriteLine("Ange operation (+, -, *, /");
-        char operation = Console.ReadKey().KeyChar;
-        Console.WriteLine("\nAnge det första talet");
-        double num1 = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine("\nAnge det andra talet");
-        double num2 = Convert.ToDouble(Console.ReadLine());
+        //Hämtar och validerar operatorn
+        char operation = Inputs.ValidOperation();
+
+        //Hämtar och validerar de två talen
+        double num1 = Inputs.ValidDouble("Ange det första talet");
+        double num2 = Inputs.ValidDouble("Ange det andra talet");
 
         double result = 0;
 
