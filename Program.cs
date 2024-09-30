@@ -49,6 +49,28 @@ class inputs
         return number;
     }
 
+    //Metod för felhantering vid val av operator.
+    public char ValidOperation()
+    {
+        Console.WriteLine("Ange operation: (+, -, *, /");
+        char operation;
+        do
+        {
+            operation = Console.ReadKey().KeyChar;
+            //Snygggar till konsolen
+            Console.WriteLine();
+            //om man ger en ogiltig inmatning så får man ett meddelande
+            if (operation != '+' && operation != '-' && operation != '*' && operation != '/')
+            {
+                Console.WriteLine("Ogiltig inmatning, ange: +, -, * eller /");
+            }
+        }
+        //kör loopen tills man angett korrekt operator
+        while (operation != '+' && operation != '-' && operation != '*' && operation != '/');
+        //returnar korrekt operator
+        return operation;
+    }
+
 
     // skapar en metod för TryParse för att kunna kalla på den när jag vill felhantera
     public bool TryDouble(string input, out double result)
