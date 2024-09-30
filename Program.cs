@@ -19,18 +19,15 @@ class Operation
     {
         return num1 * num2;
     }
-    //Ser till att man inte kan dela med 0
-    public double mDivision(double num1, double num2)
+    //Ser till att man inte kan dela med 0 
+    //la till ref-modiferare för att de lagrar korrekt resultat i num2
+    public double mDivision(ref double num1, ref double num2)
     {
-        do
+        while (num2 == 0)
         {
-            if (num2 == 0)
-            {
-                Console.WriteLine("Du kan inte dividera med 0, försök igen");
-                num2 = Convert.ToDouble(Console.ReadLine());
-            }
+            Console.WriteLine("Du kan inte dividera med 0, ange ett giltigt tal");
+            num2 = Convert.ToDouble(Console.ReadLine());
         }
-        while (num2 == 0);
         return num1 / num2;
     }
 }
@@ -112,7 +109,7 @@ internal class Program
                 break;
 
             case '/':
-                result = op.mDivision(num1, num2);
+                result = op.mDivision(ref num1, ref num2);
                 break;
                 
                 default:
