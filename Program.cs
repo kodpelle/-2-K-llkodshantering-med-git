@@ -34,6 +34,17 @@ class Operation
         return num1 / num2;
     }
 }
+class inputs
+{
+
+
+    // skapar en metod för TryParse för att kunna kalla på den när jag vill felhantera
+    public bool TryDouble(string input, out double result)
+    {
+        return double.TryParse(input, out result);
+    }
+
+}
 internal class Program
 {
     static void Main(string[] args)
